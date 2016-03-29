@@ -159,15 +159,19 @@ public class ACPI extends JFrame {
         }
         return jLabel0;
     }
-    Icon ico=new ImageIcon("./src/Fuli.jpg");
+    Icon ico=new ImageIcon("./src/Fuli.png");
 
     private void jButton0MouseMouseClicked(MouseEvent event) {try{
     double a=Double.parseDouble(getJTextField0().getText()), 
     i=Double.parseDouble(getJTextField1().getText()), 
     l=Double.parseDouble(getJTextField2().getText()),
-    n=Double.parseDouble(getJTextField3().getText());    
+    n=Double.parseDouble(getJTextField3().getText());  
+    if(n>60)
+    	JOptionPane.showMessageDialog(jButton0, "超过60年限","出错", JOptionPane.INFORMATION_MESSAGE);
+    else if(i>1)
+    	JOptionPane.showMessageDialog(jButton0, "利息应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
     if(a==0&&i==0&&l==0&&n==0)
-    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     i=l/12;
     double Y=sumofthey.Y(a, i, l, n);
     JOptionPane.showMessageDialog(jButton0, "Y="+Y,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
@@ -178,8 +182,12 @@ public class ACPI extends JFrame {
     i=Double.parseDouble(getJTextField1().getText()), 
     l=Double.parseDouble(getJTextField2().getText()),
     n=Double.parseDouble(getJTextField3().getText());  
+    if(n>60)
+    	JOptionPane.showMessageDialog(jButton0, "超过60年限","出错", JOptionPane.INFORMATION_MESSAGE);
+    else if(i>1)
+    	JOptionPane.showMessageDialog(jButton0, "利息应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
     if(a==0&&i==0&&l==0&&n==0)
-    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     i=l/12;
     double b=sumofthey.B(a, i, l, n);
     JOptionPane.showMessageDialog(jButton0, "b="+b,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
@@ -190,8 +198,13 @@ public class ACPI extends JFrame {
     i=Double.parseDouble(getJTextField1().getText()), 
     l=Double.parseDouble(getJTextField2().getText()),
     n=Double.parseDouble(getJTextField3().getText());
+    if(n>60)
+    	JOptionPane.showMessageDialog(jButton0, "超过60年限","出错", JOptionPane.INFORMATION_MESSAGE);
+    else if(i>1)
+    	JOptionPane.showMessageDialog(jButton0, "利息应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
+
     if(a==0&&i==0&&l==0&&n==0)
-    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);
+    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);
     else
     {
     i=l/12;

@@ -321,15 +321,21 @@ private JButton jButton6;
 private JButton jButton7;
 private JButton jButton8;
 private JButton jButton10;
-Icon ico=new ImageIcon("./src/Fuli.jpg");
+Icon ico=new ImageIcon("./src/Fuli.png");
 private void jButton0MouseMouseClicked(MouseEvent event) {try
 {double P=Double.parseDouble(getJTextField0().getText()), 
 i=Double.parseDouble(getJTextField1().getText()), 
 n=Double.parseDouble(getJTextField2().getText()), 
 A=Double.parseDouble(getJTextField3().getText()), 
 F=Double.parseDouble(getJTextField4().getText());
+if(n>60)
+	JOptionPane.showMessageDialog(jButton0, "超过60年限","出错", JOptionPane.INFORMATION_MESSAGE);
+else if(i>1)
+	JOptionPane.showMessageDialog(jButton0, "利率应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
+
+
 if(i==0&&P==0&&n==0&&A==0&&F==0)
-    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
 F=sumofthey.F1(P, i, n, A);
    JOptionPane.showMessageDialog(jButton0, "F="+F,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
   } 
@@ -341,8 +347,14 @@ F=sumofthey.F1(P, i, n, A);
             n=Double.parseDouble(getJTextField2().getText()), 
             A=Double.parseDouble(getJTextField3().getText()), 
             F=Double.parseDouble(getJTextField4().getText());   
+  if(n>60)
+		JOptionPane.showMessageDialog(jButton0, "超过60年限","出错", JOptionPane.INFORMATION_MESSAGE);
+	else if(i>1)
+		JOptionPane.showMessageDialog(jButton0, "利率应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
+
+
 if(i==0&&P==0&&n==0&&A==0&&F==0)
-    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
    F=sumofthey.F2(P, i, n, A);
 
    JOptionPane.showMessageDialog(jButton0, "F="+F,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
@@ -353,8 +365,14 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
             n=Double.parseDouble(getJTextField2().getText()), 
             A=Double.parseDouble(getJTextField3().getText()), 
             F=Double.parseDouble(getJTextField4().getText());
+ if(n>60)
+		JOptionPane.showMessageDialog(jButton0, "超过60年限","出错", JOptionPane.INFORMATION_MESSAGE);
+	else if(i>1)
+		JOptionPane.showMessageDialog(jButton0, "利率应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
+
+
  if(i==0&&P==0&&n==0&&A==0&&F==0)
-    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+    	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   P=sumofthey.P1(F, i, n, A);
   JOptionPane.showMessageDialog(jButton0, "P="+P,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 
@@ -365,8 +383,14 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
             n=Double.parseDouble(getJTextField2().getText()), 
             A=Double.parseDouble(getJTextField3().getText()), 
             F=Double.parseDouble(getJTextField4().getText());
+ if(n>60)
+		JOptionPane.showMessageDialog(jButton0, "超过60年限","出错", JOptionPane.INFORMATION_MESSAGE);
+	else if(i>1)
+		JOptionPane.showMessageDialog(jButton0, "利率应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
+
+
  if(i==0&&P==0&&n==0&&A==0&&F==0)
- 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+ 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   P=sumofthey.P2(F, i, n, A);
 
   JOptionPane.showMessageDialog(jButton0, "P="+P,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
@@ -377,8 +401,13 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
             n=Double.parseDouble(getJTextField2().getText()), 
             A=Double.parseDouble(getJTextField3().getText()), 
             F=Double.parseDouble(getJTextField4().getText());
+ if(n>60)
+		JOptionPane.showMessageDialog(jButton0, "超过60年限","出错", JOptionPane.INFORMATION_MESSAGE);
+	else if(i>1)
+		JOptionPane.showMessageDialog(jButton0, "利率应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
+
  if(i==0&&P==0&&n==0&&A==0&&F==0)
- 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+ 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   A=sumofthey.A1(F, i, n, P);
   JOptionPane.showMessageDialog(jButton0, "A="+A,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 
@@ -390,8 +419,13 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
             n=Double.parseDouble(getJTextField2().getText()), 
             A=Double.parseDouble(getJTextField3().getText()), 
             F=Double.parseDouble(getJTextField4().getText());
+ if(n>60)
+		JOptionPane.showMessageDialog(jButton0, "超过60年限","出错", JOptionPane.INFORMATION_MESSAGE);
+	else if(i>1)
+		JOptionPane.showMessageDialog(jButton0, "利率应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
+
  if(i==0&&P==0&&n==0&&A==0&&F==0)
- 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+ 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   A=sumofthey.A2(F, i, n, P);
   JOptionPane.showMessageDialog(jButton0, "A="+A,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
  }
@@ -401,8 +435,12 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
             n=Double.parseDouble(getJTextField2().getText()), 
             A=Double.parseDouble(getJTextField3().getText()), 
             F=Double.parseDouble(getJTextField4().getText());
+ 	if(i>1)
+		JOptionPane.showMessageDialog(jButton0, "利率应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
+
+
  if(i==0&&P==0&&n==0&&A==0&&F==0)
- 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+ 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   n=sumofthey.n1(F, i, A, P);
   JOptionPane.showMessageDialog(jButton0, "n="+n,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
  }
@@ -412,8 +450,12 @@ i=Double.parseDouble(getJTextField1().getText()),
 n=Double.parseDouble(getJTextField2().getText()), 
 A=Double.parseDouble(getJTextField3().getText()), 
 F=Double.parseDouble(getJTextField4().getText());
+if(i>1)
+	JOptionPane.showMessageDialog(jButton0, "利率应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
+
+
 if(i==0&&P==0&&n==0&&A==0&&F==0)
-	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     n=sumofthey.n2(F, i, A, P);
     JOptionPane.showMessageDialog(jButton0, "n="+n,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
 }
@@ -423,8 +465,12 @@ i=Double.parseDouble(getJTextField1().getText()),
 n=Double.parseDouble(getJTextField2().getText()), 
 A=Double.parseDouble(getJTextField3().getText()), 
 F=Double.parseDouble(getJTextField4().getText());
+if(n>60)
+	JOptionPane.showMessageDialog(jButton0, "超过60年限","出错", JOptionPane.INFORMATION_MESSAGE);
+
+
 if(i==0&&P==0&&n==0&&A==0&&F==0)
-	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     i=sumofthey.i1(F, n, A, P);
     JOptionPane.showMessageDialog(jButton0, "i="+i,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 }
@@ -434,10 +480,16 @@ i=Double.parseDouble(getJTextField1().getText()),
 n=Double.parseDouble(getJTextField2().getText()), 
 A=Double.parseDouble(getJTextField3().getText()), 
 F=Double.parseDouble(getJTextField4().getText());
+if(n>60)
+	JOptionPane.showMessageDialog(jButton0, "超过60年限","出错", JOptionPane.INFORMATION_MESSAGE);
+else if(i>1)
+	JOptionPane.showMessageDialog(jButton0, "利率应小于1","出错", JOptionPane.INFORMATION_MESSAGE);
+
+
 if(i==0&&P==0&&n==0&&A==0&&F==0)
-	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
+	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     double Vc=sumofthey.Vc(F, n, i, P);
-    
+  
     JOptionPane.showMessageDialog(jButton0, "Vc="+Vc,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 }
 
