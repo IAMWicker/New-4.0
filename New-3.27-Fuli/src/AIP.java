@@ -107,11 +107,13 @@ public class AIP extends JFrame {
         return jLabel2;
     }
     Icon ico=new ImageIcon("./src/Fuli.jpg");
+    sumofthey sum=new sumofthey();
 
-    private void jButton0MouseMouseClicked(MouseEvent event) {try{float a=(float)Double.parseDouble(getJTextField0().getText()), 
-    x=(float)Double.parseDouble(getJTextField1().getText()), 
-    n=(float)Double.parseDouble(getJTextField2().getText());
-    float M=(float) (a*(1-Math.pow(1+x,n))/-x);
+    private void jButton0MouseMouseClicked(MouseEvent event) {
+    	try{double a=Double.parseDouble(getJTextField0().getText()), 
+    x=Double.parseDouble(getJTextField1().getText()), 
+    n=Double.parseDouble(getJTextField2().getText());
+    double M=sumofthey.M(a, x, n);
     if(x==0&&n==0&&a==0)
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);
     else

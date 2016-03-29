@@ -162,42 +162,40 @@ public class ACPI extends JFrame {
     Icon ico=new ImageIcon("./src/Fuli.jpg");
 
     private void jButton0MouseMouseClicked(MouseEvent event) {try{
-    float a=(float)Double.parseDouble(getJTextField0().getText()), 
-    i=(float)Double.parseDouble(getJTextField1().getText()), 
-    l=(float)Double.parseDouble(getJTextField2().getText()),
-    n=(float)Double.parseDouble(getJTextField3().getText());    
+    double a=Double.parseDouble(getJTextField0().getText()), 
+    i=Double.parseDouble(getJTextField1().getText()), 
+    l=Double.parseDouble(getJTextField2().getText()),
+    n=Double.parseDouble(getJTextField3().getText());    
     if(a==0&&i==0&&l==0&&n==0)
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     i=l/12;
-    float Y=(float) (a*(1+i)*Math.pow(1+i,n)/(Math.pow(1+i, n)-1));
+    double Y=sumofthey.Y(a, i, l, n);
     JOptionPane.showMessageDialog(jButton0, "Y="+Y,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
     }
 
     private void jButton1MouseMouseClicked(MouseEvent event) {try{
-    float a=(float)Double.parseDouble(getJTextField0().getText()), 
-    i=(float)Double.parseDouble(getJTextField1().getText()), 
-    l=(float)Double.parseDouble(getJTextField2().getText()),
-    n=(float)Double.parseDouble(getJTextField3().getText());  
+    double a=Double.parseDouble(getJTextField0().getText()), 
+    i=Double.parseDouble(getJTextField1().getText()), 
+    l=Double.parseDouble(getJTextField2().getText()),
+    n=Double.parseDouble(getJTextField3().getText());  
     if(a==0&&i==0&&l==0&&n==0)
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     i=l/12;
-    float Y=(float) (a*(1+i)*Math.pow(1+i,n)/(Math.pow(1+i, n)-1));
-    float b=Y/n;
+    double b=sumofthey.B(a, i, l, n);
     JOptionPane.showMessageDialog(jButton0, "b="+b,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
     }
 
     private void jButton2MouseMouseClicked(MouseEvent event) {try{
-    float a=(float)Double.parseDouble(getJTextField0().getText()), 
-    i=(float)Double.parseDouble(getJTextField1().getText()), 
-    l=(float)Double.parseDouble(getJTextField2().getText()),
-    n=(float)Double.parseDouble(getJTextField3().getText());
+    double a=Double.parseDouble(getJTextField0().getText()), 
+    i=Double.parseDouble(getJTextField1().getText()), 
+    l=Double.parseDouble(getJTextField2().getText()),
+    n=Double.parseDouble(getJTextField3().getText());
     if(a==0&&i==0&&l==0&&n==0)
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);
     else
     {
     i=l/12;
-    float Y=(float) (a*(1+i)*Math.pow(1+i,n)/(Math.pow(1+i, n)-1));
-    float Z=Y-a;
+    double Z=sumofthey.Z(a, i, l, n);
     JOptionPane.showMessageDialog(jButton0, "Z="+Z,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
     }
 
