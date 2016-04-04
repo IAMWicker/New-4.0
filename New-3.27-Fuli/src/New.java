@@ -19,21 +19,39 @@ public class New extends JFrame {
     private JButton jButton0;
     private JButton jButton1;
     private JButton jButton2;
-    private static final String PREFERRED_LOOK_AND_FEEL = "javax.swing.plaf.metal.MetalLookAndFeel";
-    public New() {
+	private JButton jButton3;
+	private static final String PREFERRED_LOOK_AND_FEEL = "javax.swing.plaf.metal.MetalLookAndFeel";
+	public New() {
         initComponents();
     }
 
     private void initComponents() {
-        setTitle("复利工具");
-        setLayout(new GroupLayout());
-        add(getJButton0(), new Constraints(new Leading(20, 516, 10, 10), new Leading(32, 203, 10, 10)));
-        add(getJButton1(), new Constraints(new Leading(20, 250, 10, 10), new Leading(260, 203, 10, 10)));
-        add(getJButton2(), new Constraints(new Leading(286, 250, 12, 12), new Leading(260, 203, 12, 12)));
-        setSize(558, 489);
-    }
+		setTitle("复利工具");
+		setLayout(new GroupLayout());
+		add(getJButton2(), new Constraints(new Leading(286, 250, 12, 12), new Leading(260, 203, 12, 12)));
+		add(getJButton0(), new Constraints(new Leading(20, 250, 12, 12), new Leading(32, 203, 10, 10)));
+		add(getJButton3(), new Constraints(new Leading(286, 250, 12, 12), new Leading(32, 203, 12, 12)));
+		add(getJButton1(), new Constraints(new Leading(20, 250, 12, 12), new Leading(260, 203, 12, 12)));
+		setSize(558, 489);
+	}
 
-    private JButton getJButton2() {
+	private JButton getJButton3() {
+		if (jButton3 == null) {
+			jButton3 = new JButton();
+			jButton3.setBackground(Color.white);
+			jButton3.setText("组合计算");
+			jButton3.setMnemonic('B');
+			jButton3.addMouseListener(new MouseAdapter() {
+	
+				public void mouseClicked(MouseEvent event) {
+					jButton3MouseMouseClicked(event);
+				}
+			});
+		}
+		return jButton3;
+	}
+
+	private JButton getJButton2() {
         if (jButton2 == null) {
             jButton2 = new JButton();
             jButton2.setBackground(Color.white);
@@ -132,5 +150,10 @@ public class New extends JFrame {
         ACPI acpi=new ACPI();
         acpi.show();
     }
+
+	private void jButton3MouseMouseClicked(MouseEvent event) {
+		PI pi=new PI();
+		pi.show();
+	}
 
 }
