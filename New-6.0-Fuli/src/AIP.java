@@ -110,7 +110,15 @@ public class AIP extends JFrame {
     sumofthey sum=new sumofthey();
 
     private void jButton0MouseMouseClicked(MouseEvent event) {
-    	
+    	try{
+    		double a=Double.parseDouble(getJTextField0().getText()), 
+			  x=Double.parseDouble(getJTextField1().getText()), 
+			  n=Double.parseDouble(getJTextField2().getText());
+	   double M=sumofthey.M(a, x, n);
+	   if(x==0&&n==0&&a==0)
+	       JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真实福利",JOptionPane.INFORMATION_MESSAGE,ico);
+	   else
+		   JOptionPane.showMessageDialog(jButton0, "M="+M,"计算结果", JOptionPane.INFORMATION_MESSAGE);}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
     	
 }
 }
