@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="Fuli">
+	<class name="Fuli" table="Fuli_User_ACPI">
+		<id name="CS" column="CS"></id>
+		<property name="a" column="a"></property>
+		<property name="l" column="l"></property>
+		<property name="n" column="n"></property>
+		<property name="Y" column="Y"></property>
+		<property name="b" column="b"></property>
+		<property name="Z" column="Z"></property>
+	</class>
+</hibernate-mapping>

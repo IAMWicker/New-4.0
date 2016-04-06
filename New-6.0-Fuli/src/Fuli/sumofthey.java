@@ -1,3 +1,4 @@
+package Fuli;
 
 public class sumofthey {
 	public static double M(double a,double x,double n){

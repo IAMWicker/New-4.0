@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="Fuli">
+	<class name="Fuli" table="Fuli_User_mainFrame">
+		<id name="CS" column="CS"></id>
+		<property name="P" column="P"></property>
+		<property name="i" column="i"></property>
+		<property name="n" column="n"></property>
+		<property name="A" column="A"></property>
+		<property name="F" column="F"></property>
+	</class>
+</hibernate-mapping>
