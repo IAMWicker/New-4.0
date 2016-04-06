@@ -1,16 +1,16 @@
 package Fuli;
 
-public class W_SQL_API{
+public class W_SQL_AIP{
 		private int CS;
 		private float a;
 		private float x;
 		private float n;
 		private float M;
-		public W_SQL_API() {
+		public W_SQL_AIP() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
-		public W_SQL_API(int CS, double a, double x,double n,double M) {
+		public W_SQL_AIP(int CS, double a, double x,double n,double M) {
 			super();
 			this.CS = CS;
 			this.a = (float) a;

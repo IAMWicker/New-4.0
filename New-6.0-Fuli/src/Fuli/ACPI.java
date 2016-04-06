@@ -175,7 +175,7 @@ public class ACPI extends JFrame {
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     i=l/12;
     double Y=sumofthey.Y(a, i, l, n);
-    JOptionPane.showMessageDialog(jButton0, "Y="+Y,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
+    JOptionPane.showMessageDialog(jButton0, "Y="+Y,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_ACPI.write(a, i, n, l, 0, Y, 0);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
     }
 
     private void jButton1MouseMouseClicked(MouseEvent event) {try{
@@ -191,7 +191,7 @@ public class ACPI extends JFrame {
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     i=l/12;
     double b=sumofthey.B(a, i, l, n);
-    JOptionPane.showMessageDialog(jButton0, "b="+b,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
+    JOptionPane.showMessageDialog(jButton0, "b="+b,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_ACPI.write(a, i, n, l, 0, 0, b);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
     }
 
     private void jButton2MouseMouseClicked(MouseEvent event) {try{
@@ -210,7 +210,7 @@ public class ACPI extends JFrame {
     {
     i=l/12;
     double Z=sumofthey.Z(a, i, l, n);
-    JOptionPane.showMessageDialog(jButton0, "Z="+Z,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
+    JOptionPane.showMessageDialog(jButton0, "Z="+Z,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_ACPI.write(a, i, n, l, Z, 0, 0);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
     }
 
 }

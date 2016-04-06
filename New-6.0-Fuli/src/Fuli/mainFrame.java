@@ -323,6 +323,9 @@ private JButton jButton7;
 private JButton jButton8;
 private JButton jButton10;
 Icon ico=new ImageIcon("./src/Fuli.png");
+
+SQL_mainFrame mF=new SQL_mainFrame();
+
 private void jButton0MouseMouseClicked(MouseEvent event) {try
 {double P=Double.parseDouble(getJTextField0().getText()), 
 i=Double.parseDouble(getJTextField1().getText()), 
@@ -338,8 +341,8 @@ else if(i>1)
 if(i==0&&P==0&&n==0&&A==0&&F==0)
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
 F=sumofthey.F1(P, i, n, A);
-   JOptionPane.showMessageDialog(jButton0, "F="+F,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
-  } 
+   JOptionPane.showMessageDialog(jButton0, "F="+F,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+} 
   
   
   private void jButton1MouseMouseClicked(MouseEvent event) {try
@@ -358,7 +361,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
    F=sumofthey.F2(P, i, n, A);
 
-   JOptionPane.showMessageDialog(jButton0, "F="+F,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+   JOptionPane.showMessageDialog(jButton0, "F="+F,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
   }
 
  private void jButton2MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -375,7 +378,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
  if(i==0&&P==0&&n==0&&A==0&&F==0)
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   P=sumofthey.P1(F, i, n, A);
-  JOptionPane.showMessageDialog(jButton0, "P="+P,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
+  JOptionPane.showMessageDialog(jButton0, "P="+P,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 
  }
 
@@ -394,7 +397,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
  	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   P=sumofthey.P2(F, i, n, A);
 
-  JOptionPane.showMessageDialog(jButton0, "P="+P,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+  JOptionPane.showMessageDialog(jButton0, "P="+P,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
  }
 
  private void jButton4MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -410,7 +413,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
  if(i==0&&P==0&&n==0&&A==0&&F==0)
  	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   A=sumofthey.A1(F, i, n, P);
-  JOptionPane.showMessageDialog(jButton0, "A="+A,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
+  JOptionPane.showMessageDialog(jButton0, "A="+A,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 
 
  }
@@ -428,7 +431,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
  if(i==0&&P==0&&n==0&&A==0&&F==0)
  	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   A=sumofthey.A2(F, i, n, P);
-  JOptionPane.showMessageDialog(jButton0, "A="+A,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+  JOptionPane.showMessageDialog(jButton0, "A="+A,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
  }
 
  private void jButton6MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -443,7 +446,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
  if(i==0&&P==0&&n==0&&A==0&&F==0)
  	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   n=sumofthey.n1(F, i, A, P);
-  JOptionPane.showMessageDialog(jButton0, "n="+n,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+  JOptionPane.showMessageDialog(jButton0, "n="+n,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
  }
 
 private void jButton7MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -458,7 +461,7 @@ if(i>1)
 if(i==0&&P==0&&n==0&&A==0&&F==0)
 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     n=sumofthey.n2(F, i, A, P);
-    JOptionPane.showMessageDialog(jButton0, "n="+n,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+    JOptionPane.showMessageDialog(jButton0, "n="+n,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
 }
 
 private void jButton8MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -473,7 +476,7 @@ if(n>60)
 if(i==0&&P==0&&n==0&&A==0&&F==0)
 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     i=sumofthey.i1(F, n, A, P);
-    JOptionPane.showMessageDialog(jButton0, "i="+i,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
+    JOptionPane.showMessageDialog(jButton0, "i="+i,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 }
 
 private void jButton10MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -491,7 +494,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     double Vc=sumofthey.Vc(F, n, i, P);
   
-    JOptionPane.showMessageDialog(jButton0, "Vc="+Vc,"计算结果", JOptionPane.INFORMATION_MESSAGE);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
+    JOptionPane.showMessageDialog(jButton0, "Vc="+Vc,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 }
 
 }
