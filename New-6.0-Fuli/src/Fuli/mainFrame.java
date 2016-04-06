@@ -10,6 +10,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import org.dyno.visual.swing.layouts.Constraints;
@@ -40,32 +42,66 @@ import org.dyno.visual.swing.layouts.Leading;
   } 
   
   private void initComponents() {
-    setTitle("复利计算器");
-    setAlwaysOnTop(true);
-    setBackground(Color.lightGray);
-    setFont(new Font("Dialog", Font.BOLD, 15));
-    setLayout(new GroupLayout());
-    add(getJLabel3(), new Constraints(new Leading(59, 38, 10, 10), new Leading(184, 12, 12)));
-    add(getJLabel1(), new Constraints(new Leading(61, 38, 10, 10), new Leading(94, 10, 10)));
-    add(getJLabel0(), new Constraints(new Leading(59, 38, 12, 12), new Leading(48, 10, 10)));
-    add(getJLabel2(), new Constraints(new Leading(59, 38, 12, 12), new Leading(138, 12, 12)));
-    add(getJTextField3(), new Constraints(new Leading(103, 12, 12), new Leading(181, 12, 12)));
-    add(getJTextField2(), new Constraints(new Leading(103, 12, 12), new Leading(138, 12, 12)));
-    add(getJTextField1(), new Constraints(new Leading(103, 12, 12), new Leading(92, 10, 10)));
-    add(getJTextField0(), new Constraints(new Leading(103, 12, 12), new Leading(45, 24, 10, 10)));
-    add(getJTextField4(), new Constraints(new Leading(103, 38, 12, 12), new Leading(230, 20, 12, 12)));
-    add(getJLabel4(), new Constraints(new Leading(59, 27, 12, 12), new Leading(232, 10, 10)));
-    add(getJButton5(), new Constraints(new Leading(241, 116, 12, 12), new Leading(75, 12, 12)));
-    add(getJButton1(), new Constraints(new Leading(148, 12, 12), new Leading(72, 12, 12)));
-    add(getJButton0(), new Constraints(new Leading(148, 12, 12), new Leading(33, 10, 10)));
-    add(getJButton4(), new Constraints(new Leading(241, 116, 12, 12), new Leading(33, 10, 10)));
-    add(getJButton2(), new Constraints(new Leading(148, 206, 12, 12), new Leading(112, 19, 12, 12)));
-    add(getJButton3(), new Constraints(new Leading(148, 206, 12, 12), new Leading(151, 18, 12, 12)));
-    add(getJButton7(), new Constraints(new Leading(245, 12, 12), new Leading(220, 12, 12)));
-    add(getJButton6(), new Constraints(new Leading(245, 12, 12), new Leading(181, 12, 12)));
-    add(getJButton10(), new Constraints(new Leading(145, 212, 12, 12), new Leading(256, 12, 12)));
-    add(getJButton8(), new Constraints(new Leading(147, 92, 12, 12), new Leading(181, 63, 12, 12)));
-    setSize(548, 410);
+	setTitle("复利计算器");
+	setAlwaysOnTop(true);
+	setBackground(Color.lightGray);
+	setFont(new Font("Dialog", Font.BOLD, 15));
+	setLayout(new GroupLayout());
+	add(getJLabel3(), new Constraints(new Leading(59, 38, 10, 10), new Leading(184, 12, 12)));
+	add(getJLabel1(), new Constraints(new Leading(61, 38, 10, 10), new Leading(94, 10, 10)));
+	add(getJLabel0(), new Constraints(new Leading(59, 38, 12, 12), new Leading(48, 10, 10)));
+	add(getJLabel2(), new Constraints(new Leading(59, 38, 12, 12), new Leading(138, 12, 12)));
+	add(getJTextField3(), new Constraints(new Leading(103, 12, 12), new Leading(181, 12, 12)));
+	add(getJTextField2(), new Constraints(new Leading(103, 12, 12), new Leading(138, 12, 12)));
+	add(getJTextField1(), new Constraints(new Leading(103, 12, 12), new Leading(92, 10, 10)));
+	add(getJTextField0(), new Constraints(new Leading(103, 12, 12), new Leading(45, 24, 10, 10)));
+	add(getJTextField4(), new Constraints(new Leading(103, 38, 12, 12), new Leading(230, 20, 12, 12)));
+	add(getJLabel4(), new Constraints(new Leading(59, 27, 12, 12), new Leading(232, 10, 10)));
+	add(getJButton5(), new Constraints(new Leading(241, 116, 12, 12), new Leading(75, 12, 12)));
+	add(getJButton1(), new Constraints(new Leading(148, 12, 12), new Leading(72, 12, 12)));
+	add(getJButton0(), new Constraints(new Leading(148, 12, 12), new Leading(33, 10, 10)));
+	add(getJButton4(), new Constraints(new Leading(241, 116, 12, 12), new Leading(33, 10, 10)));
+	add(getJButton2(), new Constraints(new Leading(148, 206, 12, 12), new Leading(112, 19, 12, 12)));
+	add(getJButton3(), new Constraints(new Leading(148, 206, 12, 12), new Leading(151, 18, 12, 12)));
+	add(getJButton7(), new Constraints(new Leading(245, 12, 12), new Leading(220, 12, 12)));
+	add(getJButton6(), new Constraints(new Leading(245, 12, 12), new Leading(181, 12, 12)));
+	add(getJButton10(), new Constraints(new Leading(145, 212, 12, 12), new Leading(256, 12, 12)));
+	add(getJButton8(), new Constraints(new Leading(147, 92, 12, 12), new Leading(181, 63, 12, 12)));
+	add(getJScrollPane0(), new Constraints(new Leading(374, 100, 12, 12), new Leading(39, 80, 12, 12)));
+	add(getJButton9(), new Constraints(new Leading(414, 10, 10), new Leading(178, 12, 12)));
+	setSize(548, 410);
+}
+
+private JButton getJButton9() {
+	if (jButton9 == null) {
+		jButton9 = new JButton();
+		jButton9.setText("测试");
+		jButton9.addMouseListener(new MouseAdapter() {
+
+			public void mouseClicked(MouseEvent event) {
+				jButton9MouseMouseClicked(event);
+			}
+		});
+	}
+	return jButton9;
+}
+
+private JScrollPane getJScrollPane0() {
+	if (jScrollPane0 == null) {
+		jScrollPane0 = new JScrollPane();
+		jScrollPane0.setViewportView(getJTextArea0());
+	}
+	return jScrollPane0;
+}
+
+private JTextArea getJTextArea0() {
+	if (jTextArea0 == null) {
+		jTextArea0 = new JTextArea();
+		double F=0;
+		jTextArea0.setText("F="+String.valueOf(F)+"\n"
+				+"B=");
+	}
+	return jTextArea0;
 }
 
 private JButton getJButton10() {
@@ -323,9 +359,11 @@ private JButton jButton7;
 private JButton jButton8;
 private JButton jButton10;
 Icon ico=new ImageIcon("./src/Fuli.png");
-
+int CS=1;
 SQL_mainFrame mF=new SQL_mainFrame();
-
+private JTextArea jTextArea0;
+private JScrollPane jScrollPane0;
+private JButton jButton9;
 private void jButton0MouseMouseClicked(MouseEvent event) {try
 {double P=Double.parseDouble(getJTextField0().getText()), 
 i=Double.parseDouble(getJTextField1().getText()), 
@@ -341,7 +379,7 @@ else if(i>1)
 if(i==0&&P==0&&n==0&&A==0&&F==0)
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
 F=sumofthey.F1(P, i, n, A);
-   JOptionPane.showMessageDialog(jButton0, "F="+F,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+   JOptionPane.showMessageDialog(jButton0, "F="+F,"计算结果", JOptionPane.INFORMATION_MESSAGE);try{SQL_mainFrame.write(CS,P,i,n,A,F);}catch(Exception e){CS++;SQL_mainFrame.write(CS,P,i,n,A,F);}}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
 } 
   
   
@@ -361,7 +399,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
    F=sumofthey.F2(P, i, n, A);
 
-   JOptionPane.showMessageDialog(jButton0, "F="+F,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+   JOptionPane.showMessageDialog(jButton0, "F="+F,"计算结果", JOptionPane.INFORMATION_MESSAGE);try{SQL_mainFrame.write(CS,P,i,n,A,F);}catch(Exception e){CS++;SQL_mainFrame.write(CS,P,i,n,A,F);}}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
   }
 
  private void jButton2MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -378,7 +416,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
  if(i==0&&P==0&&n==0&&A==0&&F==0)
     	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   P=sumofthey.P1(F, i, n, A);
-  JOptionPane.showMessageDialog(jButton0, "P="+P,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
+  JOptionPane.showMessageDialog(jButton0, "P="+P,"计算结果", JOptionPane.INFORMATION_MESSAGE);try{SQL_mainFrame.write(CS,P,i,n,A,F);}catch(Exception e){CS++;SQL_mainFrame.write(CS,P,i,n,A,F);}}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 
  }
 
@@ -397,7 +435,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
  	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   P=sumofthey.P2(F, i, n, A);
 
-  JOptionPane.showMessageDialog(jButton0, "P="+P,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+  JOptionPane.showMessageDialog(jButton0, "P="+P,"计算结果", JOptionPane.INFORMATION_MESSAGE);try{SQL_mainFrame.write(CS,P,i,n,A,F);}catch(Exception e){CS++;SQL_mainFrame.write(CS,P,i,n,A,F);}}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
  }
 
  private void jButton4MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -413,7 +451,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
  if(i==0&&P==0&&n==0&&A==0&&F==0)
  	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   A=sumofthey.A1(F, i, n, P);
-  JOptionPane.showMessageDialog(jButton0, "A="+A,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
+  JOptionPane.showMessageDialog(jButton0, "A="+A,"计算结果", JOptionPane.INFORMATION_MESSAGE);try{SQL_mainFrame.write(CS,P,i,n,A,F);}catch(Exception e){CS++;SQL_mainFrame.write(CS,P,i,n,A,F);}}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 
 
  }
@@ -431,7 +469,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
  if(i==0&&P==0&&n==0&&A==0&&F==0)
  	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   A=sumofthey.A2(F, i, n, P);
-  JOptionPane.showMessageDialog(jButton0, "A="+A,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+  JOptionPane.showMessageDialog(jButton0, "A="+A,"计算结果", JOptionPane.INFORMATION_MESSAGE);try{SQL_mainFrame.write(CS,P,i,n,A,F);}catch(Exception e){CS++;SQL_mainFrame.write(CS,P,i,n,A,F);}}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
  }
 
  private void jButton6MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -446,7 +484,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
  if(i==0&&P==0&&n==0&&A==0&&F==0)
  	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
   n=sumofthey.n1(F, i, A, P);
-  JOptionPane.showMessageDialog(jButton0, "n="+n,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+  JOptionPane.showMessageDialog(jButton0, "n="+n,"计算结果", JOptionPane.INFORMATION_MESSAGE);try{SQL_mainFrame.write(CS,P,i,n,A,F);}catch(Exception e){CS++;SQL_mainFrame.write(CS,P,i,n,A,F);}}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
  }
 
 private void jButton7MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -461,7 +499,7 @@ if(i>1)
 if(i==0&&P==0&&n==0&&A==0&&F==0)
 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     n=sumofthey.n2(F, i, A, P);
-    JOptionPane.showMessageDialog(jButton0, "n="+n,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
+    JOptionPane.showMessageDialog(jButton0, "n="+n,"计算结果", JOptionPane.INFORMATION_MESSAGE);try{SQL_mainFrame.write(CS,P,i,n,A,F);}catch(Exception e){CS++;SQL_mainFrame.write(CS,P,i,n,A,F);}}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);} 
 }
 
 private void jButton8MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -476,7 +514,7 @@ if(n>60)
 if(i==0&&P==0&&n==0&&A==0&&F==0)
 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     i=sumofthey.i1(F, n, A, P);
-    JOptionPane.showMessageDialog(jButton0, "i="+i,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
+    JOptionPane.showMessageDialog(jButton0, "i="+i,"计算结果", JOptionPane.INFORMATION_MESSAGE);try{SQL_mainFrame.write(CS,P,i,n,A,F);}catch(Exception e){CS++;SQL_mainFrame.write(CS,P,i,n,A,F);}}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 }
 
 private void jButton10MouseMouseClicked(MouseEvent event) {try{double P=Double.parseDouble(getJTextField0().getText()), 
@@ -494,8 +532,15 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
 	JOptionPane.showMessageDialog(jButton0, "你没有输入任何数", "真的福利",JOptionPane.INFORMATION_MESSAGE,ico);else{
     double Vc=sumofthey.Vc(F, n, i, P);
   
-    JOptionPane.showMessageDialog(jButton0, "Vc="+Vc,"计算结果", JOptionPane.INFORMATION_MESSAGE);SQL_mainFrame.write(P,i,n,A,F);}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
+    JOptionPane.showMessageDialog(jButton0, "Vc="+Vc,"计算结果", JOptionPane.INFORMATION_MESSAGE);try{SQL_mainFrame.write(CS,P,i,n,A,F);}catch(Exception e){CS++;SQL_mainFrame.write(CS,P,i,n,A,F);}}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 }
+
+private void jButton9MouseMouseClicked(MouseEvent event) {
+	double test=SQL_mainFrame.readP();
+	JOptionPane.showMessageDialog(jButton0, "P="+test,"计算结果", JOptionPane.INFORMATION_MESSAGE);
+	
+}
+
 
 }
 

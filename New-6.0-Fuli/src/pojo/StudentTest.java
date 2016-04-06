@@ -10,9 +10,15 @@ public class StudentTest {
 	
 	public static void main(String args[]){
 		Student stu = new Student();
-		stu.setSid("3");
-		stu.setAge(25);
+		int age =stu.getAge();
+		System.out.println(age);
+		
+		
+		stu.setSid("5");
+		stu.setAge(23);
 		stu.setSname("¿Óª›Ã√");
+		
+		
 		Configuration  cfg = new Configuration();
 		SessionFactory sf = cfg.configure().buildSessionFactory();
 		Session session = sf.openSession();

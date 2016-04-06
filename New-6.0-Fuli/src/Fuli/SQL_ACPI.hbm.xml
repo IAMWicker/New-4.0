@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="Fuli">
-	<class name="Fuli" table="Fuli_User_ACPI">
+	<class name="W_SQL_ACPI" table="Fuli_User_ACPI">
 		<id name="CS" column="CS"></id>
 		<property name="a" column="a"></property>
 		<property name="l" column="l"></property>

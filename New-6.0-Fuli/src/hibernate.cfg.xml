@@ -9,7 +9,7 @@
 
         <!-- Database connection settings -->
         <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-    <property name="connection.url">jdbc:sqlserver://localhost:1433;databaseName=student</property>
+    <property name="connection.url">jdbc:sqlserver://localhost:1433;databaseName=Fuli</property>
         <property name="connection.username">eclipse</property>
         <property name="connection.password">eclipse</property>
 
@@ -27,8 +27,7 @@
         <!-- Drop and re-create the database schema on startup -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
 
-        <mapping resource="pojo/Student.hbm.xml"/>
-
+        <mapping resource="Fuli/SQL_mainFrame.hbm.xml"/>
     </session-factory>
 
 </hibernate-configuration>
