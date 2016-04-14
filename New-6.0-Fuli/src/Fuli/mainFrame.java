@@ -1,6 +1,7 @@
 package Fuli;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -10,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -20,9 +22,10 @@ import org.dyno.visual.swing.layouts.Leading;
   
   
  //VS4E -- DO NOT REMOVE THIS LINE! 
-  
+ 
  public class mainFrame extends JFrame { 
-  
+
+
   private static final long serialVersionUID = 1L; 
   private JTextField jTextField2; 
   private JTextField jTextField1; 
@@ -36,9 +39,13 @@ import org.dyno.visual.swing.layouts.Leading;
   private JLabel jLabel0;
  private JTextField jTextField4;
  private JLabel jLabel4; 
-  
+     
   public mainFrame() { 
-   initComponents(); 
+	  
+	 
+   initComponents();  
+   
+	// g.drawImage(img,548,410,null);
   } 
   
   private void initComponents() {
@@ -52,8 +59,6 @@ import org.dyno.visual.swing.layouts.Leading;
 	add(getJLabel0(), new Constraints(new Leading(59, 38, 12, 12), new Leading(48, 10, 10)));
 	add(getJLabel2(), new Constraints(new Leading(59, 38, 12, 12), new Leading(138, 12, 12)));
 	add(getJTextField3(), new Constraints(new Leading(103, 12, 12), new Leading(181, 12, 12)));
-	add(getJTextField2(), new Constraints(new Leading(103, 12, 12), new Leading(138, 12, 12)));
-	add(getJTextField1(), new Constraints(new Leading(103, 12, 12), new Leading(92, 10, 10)));
 	add(getJTextField0(), new Constraints(new Leading(103, 12, 12), new Leading(45, 24, 10, 10)));
 	add(getJTextField4(), new Constraints(new Leading(103, 38, 12, 12), new Leading(230, 20, 12, 12)));
 	add(getJLabel4(), new Constraints(new Leading(59, 27, 12, 12), new Leading(232, 10, 10)));
@@ -69,7 +74,40 @@ import org.dyno.visual.swing.layouts.Leading;
 	add(getJButton8(), new Constraints(new Leading(147, 92, 12, 12), new Leading(181, 63, 12, 12)));
 	add(getJScrollPane0(), new Constraints(new Leading(374, 100, 12, 12), new Leading(39, 80, 12, 12)));
 	add(getJButton9(), new Constraints(new Leading(414, 10, 10), new Leading(178, 12, 12)));
+	add(getJTextField2(), new Constraints(new Leading(103, 33, 12, 12), new Leading(138, 12, 12)));
+	add(getJTextField1(), new Constraints(new Leading(103, 39, 12, 12), new Leading(92, 10, 10)));
+	add(getJLabel5(), new Constraints(new Leading(12, 532, 12, 12), new Leading(10, 396, 10, 10)));
+	
+	
 	setSize(548, 410);
+}
+private JLabel getJLabel6() {
+	if (jLabel6 == null) {
+		jLabel6 = new JLabel();
+		jLabel6.setIcon(new ImageIcon(getClass().getResource("src//Fuli//a.jpg")));
+		jLabel6.setText("jLabel6");
+	}
+	return jLabel6;
+}
+ImageIcon img=new ImageIcon("src//Fuli//a.jpg");
+private JLabel getJLabel5() {
+	if (jLabel5 == null) {
+		jLabel5 = new JLabel();
+		jLabel5.setText("jLabel5");
+		img.setImage(img.getImage().getScaledInstance(img.getIconWidth(), img.getIconHeight(), Image.SCALE_DEFAULT));
+		jLabel5.setIcon(img);
+	}
+	return jLabel5;
+}
+
+private JPanel getJPanel0() {
+	if (jPanel0 == null) {
+		jPanel0 = new JPanel();
+		jPanel0.setLayout(new GroupLayout());
+		jPanel0.add(getJLabel5(), new Constraints(new Leading(-10, 532, 10, 10), new Leading(-6, 396, 10, 10)));
+		jPanel0.add(getJLabel6(), new Constraints(new Leading(292, 0, 10, 10), new Leading(344, 0, 10, 10)));
+	}
+	return jPanel0;
 }
 
 private JButton getJButton9() {
@@ -97,7 +135,8 @@ private JScrollPane getJScrollPane0() {
 private JTextArea getJTextArea0() {
 	if (jTextArea0 == null) {
 		jTextArea0 = new JTextArea();
-		double F=0;
+		double F=0.0;
+		
 		jTextArea0.setText("F="+String.valueOf(F)+"\n"
 				+"B=");
 	}
@@ -286,31 +325,31 @@ private JLabel getJLabel3() {
     return jLabel3;
 }
 
-private JTextField getJTextField0() { 
-   if (jTextField0 == null) { 
-    jTextField0 = new JTextField(); 
-    jTextField0.setText("0         "); 
-   } 
-   return jTextField0; 
-  } 
-  
-  private JTextField getJTextField1() { 
-   if (jTextField1 == null) { 
-    jTextField1 = new JTextField(); 
-    jTextField1.setText("0         "); 
-   } 
-   return jTextField1; 
-  } 
-  
-  private JTextField getJTextField2() { 
-   if (jTextField2 == null) { 
-    jTextField2 = new JTextField(); 
-    jTextField2.setText("0         "); 
-   } 
-   return jTextField2; 
-  } 
-  
-  private JButton getJButton1() { 
+private JTextField getJTextField0() {
+	if (jTextField0 == null) {
+		jTextField0 = new JTextField();
+		jTextField0.setText("10000");
+	}
+	return jTextField0;
+}
+
+private JTextField getJTextField1() {
+	if (jTextField1 == null) {
+		jTextField1 = new JTextField();
+		jTextField1.setText("0.2   ");
+	}
+	return jTextField1;
+}
+
+private JTextField getJTextField2() {
+	if (jTextField2 == null) {
+		jTextField2 = new JTextField();
+		jTextField2.setText("0");
+	}
+	return jTextField2;
+}
+
+private JButton getJButton1() { 
    if (jButton1 == null) { 
     jButton1 = new JButton(); 
     jButton1.setBackground(Color.blue); 
@@ -364,6 +403,10 @@ SQL_mainFrame mF=new SQL_mainFrame();
 private JTextArea jTextArea0;
 private JScrollPane jScrollPane0;
 private JButton jButton9;
+private JPanel jPanel0;
+private JLabel jLabel5;
+private JLabel jLabel6;
+
 private void jButton0MouseMouseClicked(MouseEvent event) {try
 {double P=Double.parseDouble(getJTextField0().getText()), 
 i=Double.parseDouble(getJTextField1().getText()), 

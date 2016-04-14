@@ -1,4 +1,5 @@
 package Fuli;
+import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -10,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import org.dyno.visual.swing.layouts.Bilateral;
 import org.dyno.visual.swing.layouts.Constraints;
 import org.dyno.visual.swing.layouts.GroupLayout;
 import org.dyno.visual.swing.layouts.Leading;
@@ -43,30 +45,41 @@ public class PI extends JFrame {
     }
 
     private void initComponents() {
-        setTitle("组合计算");
-        setLayout(new GroupLayout());
-        add(getJTextField0(), new Constraints(new Leading(108, 10, 10), new Leading(66, 10, 10)));
-        add(getJTextField2(), new Constraints(new Leading(108, 38, 12, 12), new Leading(161, 10, 10)));
-        add(getJTextField3(), new Constraints(new Leading(108, 38, 12, 12), new Leading(210, 10, 10)));
-        add(getJTextField1(), new Constraints(new Leading(108, 38, 12, 12), new Leading(112, 10, 10)));
-        add(getJLabel0(), new Constraints(new Leading(51, 10, 10), new Leading(68, 12, 12)));
-        add(getJLabel2(), new Constraints(new Leading(51, 8, 12, 12), new Leading(163, 12, 12)));
-        add(getJLabel3(), new Constraints(new Leading(51, 12, 12), new Leading(212, 12, 12)));
-        add(getJLabel1(), new Constraints(new Leading(54, 8, 10, 10), new Leading(114, 12, 12)));
-        add(getJTextField4(), new Constraints(new Leading(291, 38, 10, 10), new Leading(66, 12, 12)));
-        add(getJTextField5(), new Constraints(new Leading(291, 38, 12, 12), new Leading(114, 12, 12)));
-        add(getJTextField6(), new Constraints(new Leading(291, 38, 12, 12), new Leading(161, 12, 12)));
-        add(getJLabel4(), new Constraints(new Leading(245, 8, 10, 10), new Leading(68, 12, 12)));
-        add(getJLabel5(), new Constraints(new Leading(245, 8, 12, 12), new Leading(116, 12, 12)));
-        add(getJLabel6(), new Constraints(new Leading(247, 14, 10, 10), new Leading(163, 12, 12)));
-        add(getJButton0(), new Constraints(new Leading(472, 10, 10), new Leading(60, 12, 12)));
-        add(getJButton1(), new Constraints(new Leading(472, 12, 12), new Leading(116, 12, 12)));
-        add(getJButton2(), new Constraints(new Leading(472, 12, 12), new Leading(174, 10, 10)));
-        add(getJButton3(), new Constraints(new Leading(270, 12, 12), new Leading(270, 10, 10)));
-        setSize(610, 357);
-    }
+		setTitle("组合计算");
+		setLayout(new GroupLayout());
+		add(getJTextField0(), new Constraints(new Leading(108, 10, 10), new Leading(66, 10, 10)));
+		add(getJTextField2(), new Constraints(new Leading(108, 38, 12, 12), new Leading(161, 10, 10)));
+		add(getJTextField3(), new Constraints(new Leading(108, 38, 12, 12), new Leading(210, 10, 10)));
+		add(getJTextField1(), new Constraints(new Leading(108, 38, 12, 12), new Leading(112, 10, 10)));
+		add(getJLabel0(), new Constraints(new Leading(51, 10, 10), new Leading(68, 12, 12)));
+		add(getJLabel2(), new Constraints(new Leading(51, 8, 12, 12), new Leading(163, 12, 12)));
+		add(getJLabel3(), new Constraints(new Leading(51, 12, 12), new Leading(212, 12, 12)));
+		add(getJLabel1(), new Constraints(new Leading(54, 8, 10, 10), new Leading(114, 12, 12)));
+		add(getJTextField4(), new Constraints(new Leading(291, 38, 10, 10), new Leading(66, 12, 12)));
+		add(getJTextField5(), new Constraints(new Leading(291, 38, 12, 12), new Leading(114, 12, 12)));
+		add(getJTextField6(), new Constraints(new Leading(291, 38, 12, 12), new Leading(161, 12, 12)));
+		add(getJLabel4(), new Constraints(new Leading(245, 8, 10, 10), new Leading(68, 12, 12)));
+		add(getJLabel5(), new Constraints(new Leading(245, 8, 12, 12), new Leading(116, 12, 12)));
+		add(getJLabel6(), new Constraints(new Leading(247, 14, 10, 10), new Leading(163, 12, 12)));
+		add(getJButton0(), new Constraints(new Leading(472, 10, 10), new Leading(60, 12, 12)));
+		add(getJButton1(), new Constraints(new Leading(472, 12, 12), new Leading(116, 12, 12)));
+		add(getJButton2(), new Constraints(new Leading(472, 12, 12), new Leading(174, 10, 10)));
+		add(getJButton3(), new Constraints(new Leading(270, 12, 12), new Leading(270, 10, 10)));
+		add(getJLabel7(), new Constraints(new Bilateral(0, 0, 41), new Leading(5, 348, 10, 10)));
+		setSize(610, 357);
+	}
+ImageIcon img=new ImageIcon("src//Fuli//b.jpg");
+	private JLabel getJLabel7() {
+		if (jLabel7 == null) {
+			jLabel7 = new JLabel();
+			jLabel7.setText("jLabel7");
+			img.setImage(img.getImage().getScaledInstance(img.getIconWidth(), img.getIconHeight(), Image.SCALE_DEFAULT));
+		jLabel7.setIcon(img);
+		}
+		return jLabel7;
+	}
 
-    private JButton getJButton3() {
+	private JButton getJButton3() {
         if (jButton3 == null) {
             jButton3 = new JButton();
             jButton3.setText("计算结果");
@@ -155,14 +168,14 @@ public class PI extends JFrame {
     }
 
     private JTextField getJTextField5() {
-        if (jTextField5 == null) {
-            jTextField5 = new JTextField();
-            jTextField5.setText("0     ");
-        }
-        return jTextField5;
-    }
+		if (jTextField5 == null) {
+			jTextField5 = new JTextField();
+			jTextField5.setText("0.15");
+		}
+		return jTextField5;
+	}
 
-    private JTextField getJTextField4() {
+	private JTextField getJTextField4() {
         if (jTextField4 == null) {
             jTextField4 = new JTextField();
             jTextField4.setText("0     ");
@@ -203,14 +216,14 @@ public class PI extends JFrame {
     }
 
     private JTextField getJTextField1() {
-        if (jTextField1 == null) {
-            jTextField1 = new JTextField();
-            jTextField1.setText("0     ");
-        }
-        return jTextField1;
-    }
+		if (jTextField1 == null) {
+			jTextField1 = new JTextField();
+			jTextField1.setText("0.2     ");
+		}
+		return jTextField1;
+	}
 
-    private JTextField getJTextField3() {
+	private JTextField getJTextField3() {
         if (jTextField3 == null) {
             jTextField3 = new JTextField();
             jTextField3.setText("0     ");
@@ -227,15 +240,16 @@ public class PI extends JFrame {
     }
 
     private JTextField getJTextField0() {
-        if (jTextField0 == null) {
-            jTextField0 = new JTextField();
-            jTextField0.setText("0         ");
-        }
-        return jTextField0;
-    }
-    
-    double sum=0;
+		if (jTextField0 == null) {
+			jTextField0 = new JTextField();
+			jTextField0.setText("0         ");
+		}
+		return jTextField0;
+	}
+
+	double sum=0;
     Icon ico=new ImageIcon("./src/Fuli.png");
+	private JLabel jLabel7;
 
     private void jButton0MouseMouseClicked(MouseEvent event) {
         try

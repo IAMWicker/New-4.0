@@ -46,6 +46,7 @@ public class SQL_mainFrame {
 		List a=session.createSQLQuery("SELECT F FROM Fuli_User_mainFrame").list();
 		Object[] obj = (Object[]) a.get(0);
 		double F=Double.parseDouble(obj[0].toString());
+		
 		return F;
 	}
 	public static double readi()

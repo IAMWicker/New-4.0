@@ -1,4 +1,5 @@
 package Fuli;
+import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -35,23 +36,33 @@ public class ACPI extends JFrame {
     }
 
     private void initComponents() {
-        setTitle("还贷计算");
-        setLayout(new GroupLayout());
-        add(getJLabel0(), new Constraints(new Leading(28, 10, 10), new Leading(37, 10, 10)));
-        add(getJTextField0(), new Constraints(new Leading(47, 12, 12), new Leading(37, 12, 12)));
-        add(getJLabel1(), new Constraints(new Leading(28, 7, 10, 286), new Leading(73, 12, 12)));
-        add(getJTextField1(), new Constraints(new Leading(47, 10, 235), new Leading(73, 12, 12)));
-        add(getJLabel2(), new Constraints(new Leading(28, 10, 288), new Leading(113, 12, 12)));
-        add(getJTextField2(), new Constraints(new Leading(47, 10, 235), new Leading(109, 12, 12)));
-        add(getJLabel3(), new Constraints(new Leading(28, 10, 286), new Leading(149, 12, 12)));
-        add(getJTextField3(), new Constraints(new Leading(47, 10, 235), new Leading(147, 12, 12)));
-        add(getJButton1(), new Constraints(new Leading(155, 12, 12), new Leading(87, 10, 10)));
-        add(getJButton0(), new Constraints(new Leading(155, 12, 12), new Leading(44, 10, 10)));
-        add(getJButton2(), new Constraints(new Leading(155, 12, 12), new Leading(131, 12, 12)));
-        setSize(320, 240);
-    }
+		setTitle("还贷计算");
+		setLayout(new GroupLayout());
+		add(getJLabel0(), new Constraints(new Leading(28, 10, 10), new Leading(37, 10, 10)));
+		add(getJTextField0(), new Constraints(new Leading(47, 12, 12), new Leading(37, 12, 12)));
+		add(getJLabel1(), new Constraints(new Leading(28, 7, 10, 286), new Leading(73, 12, 12)));
+		add(getJTextField1(), new Constraints(new Leading(47, 10, 235), new Leading(73, 12, 12)));
+		add(getJLabel2(), new Constraints(new Leading(28, 10, 288), new Leading(113, 12, 12)));
+		add(getJTextField2(), new Constraints(new Leading(47, 10, 235), new Leading(109, 12, 12)));
+		add(getJLabel3(), new Constraints(new Leading(28, 10, 286), new Leading(149, 12, 12)));
+		add(getJTextField3(), new Constraints(new Leading(47, 10, 235), new Leading(147, 12, 12)));
+		add(getJButton1(), new Constraints(new Leading(155, 12, 12), new Leading(87, 10, 10)));
+		add(getJButton0(), new Constraints(new Leading(155, 12, 12), new Leading(44, 10, 10)));
+		add(getJButton2(), new Constraints(new Leading(155, 12, 12), new Leading(131, 12, 12)));
+		add(getJLabel4(), new Constraints(new Leading(5, 310, 10, 10), new Leading(5, 230, 12, 12)));
+		setSize(320, 240);
+	}
+ImageIcon img=new ImageIcon("src//Fuli//b.jpg");
+	private JLabel getJLabel4() {
+		if (jLabel4 == null) {
+			jLabel4 = new JLabel();
+			jLabel4.setText("jLabel4");
+		}img.setImage(img.getImage().getScaledInstance(img.getIconWidth(), img.getIconHeight(), Image.SCALE_DEFAULT));
+		jLabel4.setIcon(img);
+		return jLabel4;
+	}
 
-    private JButton getJButton2() {
+	private JButton getJButton2() {
         if (jButton2 == null) {
             jButton2 = new JButton();
             jButton2.setText("还款利息");
@@ -128,14 +139,14 @@ public class ACPI extends JFrame {
     }
 
     private JTextField getJTextField1() {
-        if (jTextField1 == null) {
-            jTextField1 = new JTextField();
-            jTextField1.setText("0         ");
-        }
-        return jTextField1;
-    }
+		if (jTextField1 == null) {
+			jTextField1 = new JTextField();
+			jTextField1.setText("0.3         ");
+		}
+		return jTextField1;
+	}
 
-    private JLabel getJLabel1() {
+	private JLabel getJLabel1() {
         if (jLabel1 == null) {
             jLabel1 = new JLabel();
             jLabel1.setText("i");
@@ -145,14 +156,14 @@ public class ACPI extends JFrame {
     }
 
     private JTextField getJTextField0() {
-        if (jTextField0 == null) {
-            jTextField0 = new JTextField();
-            jTextField0.setText("0         ");
-        }
-        return jTextField0;
-    }
+		if (jTextField0 == null) {
+			jTextField0 = new JTextField();
+			jTextField0.setText("10000         ");
+		}
+		return jTextField0;
+	}
 
-    private JLabel getJLabel0() {
+	private JLabel getJLabel0() {
         if (jLabel0 == null) {
             jLabel0 = new JLabel();
             jLabel0.setText("a");
@@ -161,6 +172,7 @@ public class ACPI extends JFrame {
         return jLabel0;
     }
     Icon ico=new ImageIcon("./src/Fuli.png");
+	private JLabel jLabel4;
 
     private void jButton0MouseMouseClicked(MouseEvent event) {try{
     double a=Double.parseDouble(getJTextField0().getText()), 

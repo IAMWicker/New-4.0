@@ -1,4 +1,5 @@
 package Fuli;
+import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -31,19 +32,30 @@ public class AIP extends JFrame {
     }
 
     private void initComponents() {
-        setTitle("定投计算");
-        setLayout(new GroupLayout());
-        add(getJTextField0(), new Constraints(new Leading(130, 10, 10), new Leading(97, 10, 10)));
-        add(getJTextField1(), new Constraints(new Leading(130, 10, 10), new Leading(153, 10, 10)));
-        add(getJTextField2(), new Constraints(new Leading(130, 10, 10), new Leading(214, 10, 10)));
-        add(getJLabel2(), new Constraints(new Leading(100, 24, 10, 10), new Leading(216, 12, 12)));
-        add(getJLabel0(), new Constraints(new Leading(99, 10, 10), new Leading(97, 10, 10)));
-        add(getJLabel1(), new Constraints(new Leading(100, 11, 12, 12), new Leading(155, 12, 12)));
-        add(getJButton0(), new Constraints(new Leading(218, 10, 10), new Leading(150, 12, 12)));
-        setSize(427, 349);
-    }
+		setTitle("定投计算");
+		setLayout(new GroupLayout());
+		add(getJTextField0(), new Constraints(new Leading(130, 10, 10), new Leading(97, 10, 10)));
+		add(getJTextField1(), new Constraints(new Leading(130, 10, 10), new Leading(153, 10, 10)));
+		add(getJTextField2(), new Constraints(new Leading(130, 10, 10), new Leading(214, 10, 10)));
+		add(getJLabel2(), new Constraints(new Leading(100, 24, 10, 10), new Leading(216, 12, 12)));
+		add(getJLabel0(), new Constraints(new Leading(99, 10, 10), new Leading(97, 10, 10)));
+		add(getJLabel1(), new Constraints(new Leading(100, 11, 12, 12), new Leading(155, 12, 12)));
+		add(getJButton0(), new Constraints(new Leading(218, 10, 10), new Leading(150, 12, 12)));
+		add(getJLabel3(), new Constraints(new Leading(8, 413, 10, 10), new Leading(8, 334, 10, 10)));
+		setSize(427, 349);
+	}
+ImageIcon img=new ImageIcon("src//Fuli//a.jpg");
+	private JLabel getJLabel3() {
+		if (jLabel3 == null) {
+			jLabel3 = new JLabel();
+			jLabel3.setText("");img.setImage(img.getImage().getScaledInstance(img.getIconWidth(), img.getIconHeight(), Image.SCALE_DEFAULT));
+		jLabel3.setIcon(img);
+			
+		}
+		return jLabel3;
+	}
 
-    private JButton getJButton0() {
+	private JButton getJButton0() {
         if (jButton0 == null) {
             jButton0 = new JButton();
             jButton0.setText("定投收益");
@@ -66,14 +78,14 @@ public class AIP extends JFrame {
     }
 
     private JTextField getJTextField1() {
-        if (jTextField1 == null) {
-            jTextField1 = new JTextField();
-            jTextField1.setText("0         ");
-        }
-        return jTextField1;
-    }
+		if (jTextField1 == null) {
+			jTextField1 = new JTextField();
+			jTextField1.setText("0.15         ");
+		}
+		return jTextField1;
+	}
 
-    private JTextField getJTextField0() {
+	private JTextField getJTextField0() {
         if (jTextField0 == null) {
             jTextField0 = new JTextField();
             jTextField0.setText("0         ");
@@ -109,6 +121,7 @@ public class AIP extends JFrame {
     }
     Icon ico=new ImageIcon("./src/Fuli.png");
     sumofthey sum=new sumofthey();
+	private JLabel jLabel3;
 
     private void jButton0MouseMouseClicked(MouseEvent event) {
     	try{
