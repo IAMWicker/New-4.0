@@ -72,15 +72,13 @@ import org.dyno.visual.swing.layouts.Leading;
 	add(getJButton6(), new Constraints(new Leading(245, 12, 12), new Leading(181, 12, 12)));
 	add(getJButton10(), new Constraints(new Leading(145, 212, 12, 12), new Leading(256, 12, 12)));
 	add(getJButton8(), new Constraints(new Leading(147, 92, 12, 12), new Leading(181, 63, 12, 12)));
-	add(getJScrollPane0(), new Constraints(new Leading(374, 100, 12, 12), new Leading(39, 80, 12, 12)));
-	add(getJButton9(), new Constraints(new Leading(414, 10, 10), new Leading(178, 12, 12)));
 	add(getJTextField2(), new Constraints(new Leading(103, 33, 12, 12), new Leading(138, 12, 12)));
 	add(getJTextField1(), new Constraints(new Leading(103, 39, 12, 12), new Leading(92, 10, 10)));
-	add(getJLabel5(), new Constraints(new Leading(12, 532, 12, 12), new Leading(10, 396, 10, 10)));
-	
-	
-	setSize(548, 410);
+	add(getJScrollPane0(), new Constraints(new Leading(50, 400, 12, 12), new Leading(300, 50, 10, 10)));
+	add(getJLabel5(), new Constraints(new Leading(4, 567, 10, 10), new Leading(6, 500, 10, 10)));
+	setSize(544, 467);
 }
+
 private JLabel getJLabel6() {
 	if (jLabel6 == null) {
 		jLabel6 = new JLabel();
@@ -110,20 +108,6 @@ private JPanel getJPanel0() {
 	return jPanel0;
 }
 
-private JButton getJButton9() {
-	if (jButton9 == null) {
-		jButton9 = new JButton();
-		jButton9.setText("测试");
-		jButton9.addMouseListener(new MouseAdapter() {
-
-			public void mouseClicked(MouseEvent event) {
-				jButton9MouseMouseClicked(event);
-			}
-		});
-	}
-	return jButton9;
-}
-
 private JScrollPane getJScrollPane0() {
 	if (jScrollPane0 == null) {
 		jScrollPane0 = new JScrollPane();
@@ -135,10 +119,9 @@ private JScrollPane getJScrollPane0() {
 private JTextArea getJTextArea0() {
 	if (jTextArea0 == null) {
 		jTextArea0 = new JTextArea();
-		double F=0.0;
 		
-		jTextArea0.setText("F="+String.valueOf(F)+"\n"
-				+"B=");
+		jTextArea0.setText("最近结果F="+SQL_mainFrame.readF()+"\n"
+				);
 	}
 	return jTextArea0;
 }
@@ -402,7 +385,6 @@ int CS=1;
 SQL_mainFrame mF=new SQL_mainFrame();
 private JTextArea jTextArea0;
 private JScrollPane jScrollPane0;
-private JButton jButton9;
 private JPanel jPanel0;
 private JLabel jLabel5;
 private JLabel jLabel6;

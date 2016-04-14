@@ -38,26 +38,24 @@ public class SQL_mainFrame {
 	
 		
 	}
-	public static double readF()
+	public static String readF()
 	{
 		Configuration  cfg = new Configuration();
 		SessionFactory sf = cfg.configure().buildSessionFactory();
 		Session session = sf.openSession();
-		List a=session.createSQLQuery("SELECT F FROM Fuli_User_mainFrame").list();
-		Object[] obj = (Object[]) a.get(0);
-		double F=Double.parseDouble(obj[0].toString());
+		String a=session.createSQLQuery("SELECT F FROM Fuli_User_mainFrame").list().toString();
+
 		
-		return F;
+		return a;
 	}
-	public static double readi()
+	public static String readi()
 	{
 		Configuration  cfg = new Configuration();
 		SessionFactory sf = cfg.configure().buildSessionFactory();
 		Session session = sf.openSession();
-		List a=session.createSQLQuery("SELECT i FROM Fuli_User_mainFrame").list();
-		Object[] obj = (Object[]) a.get(0);
-		double i=Double.parseDouble(obj[0].toString());;
-		return i;
+		String a=session.createSQLQuery("SELECT i FROM Fuli_User_mainFrame").list().toString();
+		
+		return a;
 	}
 	
 	public static double readn()

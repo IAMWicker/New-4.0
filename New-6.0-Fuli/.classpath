@@ -14,9 +14,6 @@
 	<classpathentry kind="lib" path="lib/jandex-2.0.0.Final.jar"/>
 	<classpathentry kind="lib" path="lib/javassist-3.20.0-GA.jar"/>
 	<classpathentry kind="lib" path="lib/jboss-logging-3.3.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/sqljdbc.jar"/>
-	<classpathentry kind="lib" path="lib/sqljdbc4.jar"/>
-	<classpathentry kind="lib" path="lib/sqljdbc41.jar"/>
 	<classpathentry kind="lib" path="lib/sqljdbc42.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
