@@ -58,34 +58,34 @@ public class SQL_mainFrame {
 		return a;
 	}
 	
-	public static double readn()
+	public static String readn()
 	{
 		Configuration  cfg = new Configuration();
 		SessionFactory sf = cfg.configure().buildSessionFactory();
 		Session session = sf.openSession();
-		List a=session.createSQLQuery("SELECT n FROM Fuli_User_mainFrame").list();
-		Object[] obj = (Object[]) a.get(0);
-		double n=Double.parseDouble(obj[0].toString());;
-		return n;
+		String a=session.createSQLQuery("SELECT n FROM Fuli_User_mainFrame").list().toString();
+
+
+		return a;
 	}
-	public static double readA()
+	public static String readA()
 	{
 		Configuration  cfg = new Configuration();
 		SessionFactory sf = cfg.configure().buildSessionFactory();
 		Session session = sf.openSession();
-		List a=session.createSQLQuery("SELECT A FROM Fuli_User_mainFrame").list();
-		Object[] obj = (Object[]) a.get(0);
-		double A=Double.parseDouble(obj[0].toString());;
-		return A;
+		String a=session.createSQLQuery("SELECT A FROM Fuli_User_mainFrame").list().toString();
+
+	
+		return a;
 	}
-	public static double readP()
+	public static String readP()
 	{
 		Configuration  cfg = new Configuration();
 		SessionFactory sf = cfg.configure().buildSessionFactory();
 		Session session = sf.openSession();
-		List a=session.createSQLQuery("SELECT P FROM Fuli_User_mainFrame").list();
-		Object[] obj = (Object[]) a.get(0);
-		double P=Double.parseDouble(obj[0].toString());;
-		return P;
+		String a=session.createSQLQuery("SELECT P FROM Fuli_User_mainFrame").list().toString();
+
+		
+		return a;
 	}
 }

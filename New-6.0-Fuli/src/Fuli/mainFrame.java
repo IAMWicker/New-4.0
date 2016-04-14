@@ -560,11 +560,7 @@ if(i==0&&P==0&&n==0&&A==0&&F==0)
     JOptionPane.showMessageDialog(jButton0, "Vc="+Vc,"计算结果", JOptionPane.INFORMATION_MESSAGE);try{SQL_mainFrame.write(CS,P,i,n,A,F);}catch(Exception e){CS++;SQL_mainFrame.write(CS,P,i,n,A,F);}}}catch(Exception e){JOptionPane.showMessageDialog(jButton0, "请输入数字","出错", JOptionPane.INFORMATION_MESSAGE);}
 }
 
-private void jButton9MouseMouseClicked(MouseEvent event) {
-	double test=SQL_mainFrame.readP();
-	JOptionPane.showMessageDialog(jButton0, "P="+test,"计算结果", JOptionPane.INFORMATION_MESSAGE);
-	
-}
+
 
 
 }
